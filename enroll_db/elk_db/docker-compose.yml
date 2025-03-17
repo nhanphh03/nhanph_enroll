@@ -1,0 +1,42 @@
+version: '3.7'
+services:
+
+  odfe-node1:
+    image: amazon/opendistro-for-elasticsearch:1.12.0
+    container_name: odfe-node1
+    restart: always
+    environment:
+      - opendistro_security.disabled=true
+      - cluster.name=odfe-cluster
+      - node.name=odfe-node1
+      - discovery.seed_hosts=odfe-node1
+      - cluster.initial_master_nodes=odfe-node1
+      - bootstrap.memory_lock=true # along with the memlock settings below, disables swapping
+      - "ES_JAVA_OPTS=-Xms2g -Xmx2g" # minimum and maximum Java heap size, recommend setting both to 50% of system RAM
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+      nofile:
+        soft: 262144 # maximum number of open files for the Elasticsearch user, set to at least 65536 on modern systems
+        hard: 262144
+    deploy:
+      resources:
+        limits:
+          memory: 4G
+        reservations:
+          memory: 256M
+    # volumes:
+    #   - ./face_proton_202503/_data:/usr/share/elasticsearch/data
+    ports:
+      - 9200:9200
+      - 9600:9600
+    networks:
+      - odfe-net
+
+volumes:
+  odfe-data1:
+  data_mongo:
+
+networks:
+  odfe-net:

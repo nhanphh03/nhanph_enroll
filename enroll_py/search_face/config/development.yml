@@ -1,0 +1,42 @@
+DEBUG: true
+
+log_config_file: "logger.yaml"
+log_folder: "logs"
+log_images: "images"
+
+# ES database config
+enable_es: true
+api_log_index: "api_log"
+face_index: "face2"
+es_hosts: ["172.16.0.155:9200"]
+
+# Face config
+similar_thresh_compare: 0.75
+similar_thresh_liveness: 0.6
+thresh_liveness: 0.6
+min_liveness: 1
+
+# Check action config
+thresh_action: 1
+
+thresh_up: -10
+thresh_down: 10
+thresh_left: 10
+thresh_right: -10
+thresh_tilting_left: 8
+thresh_tilting_right: -8
+thresh_blink: 5.0
+thresh_mouth: 0.7
+
+# face anti spoof
+face_anti_spoof_threshold: 0.63
+face_anti_spoof_image_size: 260
+
+# api config
+blueprints: []
+apis: ['face', 'face2']
+
+# model serving config
+service_host: "localhost"
+service_port:  8500
+service_timeout: 10

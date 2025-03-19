@@ -1,0 +1,20 @@
+version: '3.7'
+services:
+  face_service:
+    restart: always
+    image: face_enroll_test
+    environment:
+      CONFIG_MODE: Production
+      CUSTOM_CONFIG_PATH: /workspace/config/production.yml
+      TZ: Asia/Ho_Chi_Minh
+    volumes:
+      - type: bind
+        source: ./production.yml
+        target: /workspace/config/production.yml
+      - type: bind
+        source: ./logs
+        target: /workspace/logs
+    ports:
+      - "8006:15000"
+        #    depends_on:
+        #- face_tf_serving

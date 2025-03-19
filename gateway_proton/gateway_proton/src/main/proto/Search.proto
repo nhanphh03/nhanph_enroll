@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package com.proton.gateway;
+
+option java_multiple_files = true;
+option java_package = "com.proton.gateway.proto";
+option java_outer_classname = "SearchFaceServiceProto";
+
+// Định nghĩa service
+service SearchFaceService {
+  rpc GetData (SearchFaceRequest) returns (SearchFaceResponse);
+}
+
+// Định nghĩa message request
+message SearchFaceRequest {
+  string image = 1;
+}
+
+// Định nghĩa message response
+message SearchFaceResponse {
+  string response_code = 1;
+  string people_id = 2;
+  int32 score = 3;
+}

@@ -37,6 +37,6 @@ blueprints: []
 apis: ['face', 'face2']
 
 # model serving config
-service_host: "192.168.1.168"
+service_host: "192.168.1.1"
 service_port:  28500
 service_timeout: 20

@@ -12,8 +12,8 @@ import org.springframework.stereotype.Service;
  */
 
 @Service
-@RequiredArgsConstructor
+//@RequiredArgsConstructor
 public class SearchService {
-    private final ApiConfig apiConfig;
+//    private final ApiConfig apiConfig;
 
 }

@@ -10,9 +10,9 @@ import org.springframework.stereotype.Service;
  * {@code @date:} 3/19/2025 2025
  * {@code @Copyright:} @nhanph
  */
-
 @Service
-@RequiredArgsConstructor
-public class RegisterService {
-    private final ApiConfig apiConfig;
+//@RequiredArgsConstructor
+public class RemoveService {
+
+//    private final ApiConfig apiConfig;
 }

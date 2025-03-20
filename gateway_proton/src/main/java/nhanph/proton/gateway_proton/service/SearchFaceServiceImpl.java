@@ -1,5 +1,9 @@
 package nhanph.proton.gateway_proton.service;
 
+import com.nhanph.grpc.SearchFaceRequest;
+import com.nhanph.grpc.SearchFaceResponse;
+import com.nhanph.grpc.SearchFaceServiceGrpc;
+import io.grpc.stub.StreamObserver;
 import org.springframework.grpc.server.service.GrpcService;
 
 /**

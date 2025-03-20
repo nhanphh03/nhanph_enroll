@@ -3,7 +3,7 @@ syntax = "proto3";
 package com.proton.gateway;
 
 option java_multiple_files = true;
-option java_package = "com.proton.gateway.proto";
+option java_package = "com.nhanph.grpc";
 option java_outer_classname = "SearchFaceServiceProto";
 
 // Định nghĩa service

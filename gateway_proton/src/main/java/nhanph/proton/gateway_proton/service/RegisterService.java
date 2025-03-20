@@ -1,7 +1,6 @@
 package nhanph.proton.gateway_proton.service;
 
 import lombok.RequiredArgsConstructor;
-import nhanph.proton.gateway_proton.config.ApiConfig;
 import org.springframework.stereotype.Service;
 
 /**
@@ -10,9 +9,9 @@ import org.springframework.stereotype.Service;
  * {@code @date:} 3/19/2025 2025
  * {@code @Copyright:} @nhanph
  */
-@Service
-@RequiredArgsConstructor
-public class RemoveService {
 
-    private final ApiConfig apiConfig;
+@Service
+//@RequiredArgsConstructor
+public class RegisterService {
+//    private final ApiConfig apiConfig;
 }

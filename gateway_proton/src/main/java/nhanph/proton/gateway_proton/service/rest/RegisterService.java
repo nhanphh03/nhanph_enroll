@@ -1,7 +1,5 @@
-package nhanph.proton.gateway_proton.service;
+package nhanph.proton.gateway_proton.service.rest;
 
-import lombok.RequiredArgsConstructor;
-import nhanph.proton.gateway_proton.config.ApiConfig;
 import org.springframework.stereotype.Service;
 
 /**
@@ -13,7 +11,6 @@ import org.springframework.stereotype.Service;
 
 @Service
 //@RequiredArgsConstructor
-public class SearchService {
+public class RegisterService {
 //    private final ApiConfig apiConfig;
-
 }
